@@ -1,3 +1,16 @@
+terraform {
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+      version = "5.47.0"
+    }
+  }
+}
+
+provider "aws" {
+  # Configuration options
+}
+
 resource "aws_instance" "managed_nodes" {
   ami = "ami-0230bd60aa48260c6"
   instance_type = "t2.micro"
